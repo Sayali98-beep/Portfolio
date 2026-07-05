@@ -1,0 +1,297 @@
+@charset "UTF-8";
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#0a0a0a;
+    color:#fff;
+    font-family:'Poppins',sans-serif;
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+/* Container */
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    padding:60px 20px;
+    position:relative;
+}
+
+/* Corner Border */
+
+.corner{
+    position:absolute;
+    top:20px;
+    left:20px;
+    width:110px;
+    height:110px;
+    border-top:4px dashed #98ff78;
+    border-left:4px dashed #98ff78;
+}
+
+/* Hero Section */
+
+.hero{
+    text-align:center;
+    margin-top:40px;
+}
+
+.hello{
+    font-size:2rem;
+    color:#7d8490;
+    font-family:'Orbitron',sans-serif;
+}
+
+.name{
+    font-family:'Orbitron',sans-serif;
+    font-size:4rem;
+    margin-top:15px;
+}
+
+.name span{
+    color:#98ff78;
+}
+
+.info{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:35px;
+    margin-top:25px;
+    flex-wrap:wrap;
+}
+
+.info div{
+    color:#cfcfcf;
+    font-size:1.1rem;
+}
+
+.info a{
+    color:#98ff78;
+    text-decoration:none;
+    font-size:1.1rem;
+    transition:0.3s;
+}
+
+.info a:hover{
+    color:#ffffff;
+}
+
+/* About */
+
+.about{
+    margin-top:100px;
+}
+
+.section-title{
+    font-family:'Orbitron',sans-serif;
+    font-size:2.2rem;
+    margin-bottom:50px;
+}
+
+.section-title span{
+    color:#98ff78;
+}
+
+/* Content */
+
+.about-content{
+    display:flex;
+    align-items:center;
+    gap:70px;
+    flex-wrap:wrap;
+}
+
+/* Monitor */
+
+.monitor{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.screen{
+    width:340px;
+    height:240px;
+    border:10px solid #b5bcc4;
+    background:#050505;
+    padding:25px;
+    box-shadow:0 0 20px rgba(0,0,0,.5);
+}
+
+.line{
+    height:10px;
+    background:#36d86b;
+    margin-bottom:14px;
+}
+
+.short{
+    width:20%;
+}
+
+.medium{
+    width:45%;
+}
+
+.long{
+    width:70%;
+}
+
+.stand{
+    width:60px;
+    height:30px;
+    background:#b5bcc4;
+}
+
+.base{
+    width:120px;
+    height:12px;
+    background:#111;
+}
+
+/* Text */
+
+.text-content{
+    flex:1;
+    min-width:300px;
+}
+
+.text-content p{
+    font-size:1.25rem;
+    line-height:1.8;
+    color:#d6d6d6;
+    margin-bottom:25px;
+}
+
+.highlight{
+    color:#98ff78;
+    font-weight:600;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .name{
+        font-size:2.6rem;
+    }
+
+    .section-title{
+        font-size:1.7rem;
+    }
+
+    .about-content{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .screen{
+        width:280px;
+        height:200px;
+    }
+
+    .text-content p{
+        font-size:1rem;
+    }
+    
+     .interest-container{
+        grid-template-columns:1fr;
+    }
+
+    .section-title h2{
+        font-size:2rem;
+    }
+
+    .content h3{
+        font-size:1.5rem;
+    }
+}
+    
+    
+    /* Navigation Menu */
+
+.menu{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin-top:50px;
+}
+
+.menu a{
+    color:#98ff78;
+    text-decoration:none;
+    font-family:'Orbitron',sans-serif;
+    font-size:1.4rem;
+    padding:10px 18px;
+    border:1px solid #98ff78;
+    border-radius:5px;
+    transition:.3s;
+}
+
+.menu a:hover{
+    background:#98ff78;
+    color:#000;
+ }
+ 
+ .interest-container{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:35px;
+}
+
+/* Interest */
+.interest-card{
+    background:#17181d;
+    border-radius:18px;
+    padding:25px;
+    display:flex;
+    align-items:center;
+    gap:25px;
+    transition:.3s;
+}
+
+.interest-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 20px rgba(125,255,106,.15);
+}
+
+.icon-box{
+    width:95px;
+    height:95px;
+    border-radius:50%;
+    background:#0f1014;
+    border:10px solid #202126;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-shrink:0;
+}
+
+.icon-box i{
+    font-size:2.3rem;
+    color:#fff;
+}
+
+.content h3{
+    font-size:2rem;
+    margin-bottom:10px;
+    color:#fff;
+}
+
+.content p{
+    color:#737983;
+    line-height:1.7;
+    font-size:1.1rem;
+    font-family:Arial, sans-serif;
+ }
+  
+
+

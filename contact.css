@@ -1,0 +1,263 @@
+@charset "UTF-8";
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#0d0f12;
+    font-family:'Orbitron', sans-serif;
+    color:#fff;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+}
+
+.contact-section{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    padding:60px 0;
+}
+
+.title{
+    text-align:center;
+    font-size:4rem;
+    margin-bottom:50px;
+    color:#7cff6b;
+}
+
+.title span{
+    color:#fff;
+}
+
+.subtitle{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    font-size:2rem;
+    margin-bottom:40px;
+}
+
+.subtitle span{
+    color:#7cff6b;
+}
+
+.line{
+    width:6px;
+    height:50px;
+    background:#7cff6b;
+}
+
+.contact-form{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.left-side{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+.input-box{
+    display:flex;
+    background:#0a0a0a;
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:8px;
+    overflow:hidden;
+}
+
+.icon{
+    width:70px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#1b1e22;
+    color:#fff;
+    font-size:1.4rem;
+}
+
+.input-box input{
+    flex:1;
+    background:transparent;
+    border:none;
+    outline:none;
+    color:#fff;
+    padding:20px;
+    font-size:1rem;
+}
+
+.right-side textarea{
+    width:100%;
+    height:100%;
+    min-height:250px;
+    background:#0a0a0a;
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:8px;
+    color:#fff;
+    padding:20px;
+    resize:none;
+    outline:none;
+    font-size:1rem;
+}
+
+::placeholder{
+    color:#666;
+}
+
+.send-btn{
+    display:block;
+    margin:40px auto 0;
+    background:#8af27c;
+    color:#000;
+    border:none;
+    border-radius:50px;
+    padding:18px 50px;
+    font-size:1.4rem;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.send-btn i{
+    margin-right:10px;
+}
+
+.send-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 0 20px rgba(138,242,124,0.6);
+}
+
+@media(max-width:768px){
+
+    .contact-form{
+        grid-template-columns:1fr;
+    }
+
+    .title{
+        font-size:2.5rem;
+    }
+
+    .subtitle{
+        font-size:1.4rem;
+    }
+}    
+.green-line{
+    color:#86ff7a;
+    margin-right:10px;
+}
+
+.highlight{
+    color:#86ff7a;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:30px;
+  }
+  
+.contact-card{
+    background:#17191d;
+    border-radius:18px;
+    padding:24px 28px;
+    display:flex;
+    align-items:center;
+    gap:25px;
+    transition:0.3s ease;
+    box-shadow:0 5px 20px rgba(0,0,0,0.25);
+}
+
+.contact-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 30px rgba(134,255,122,0.15);
+  }
+  
+  .icon-circle{
+    width:95px;
+    height:95px;
+    border-radius:50%;
+    background:#0d0f12;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:8px solid rgba(255,255,255,0.05);
+    flex-shrink:0;
+}
+
+.icon-circle i{
+    font-size:2.3rem;
+    color:#fff;
+}
+
+.info h3{
+    font-size:1.9rem;
+    margin-bottom:10px;
+    color:#f0f0f0;
+}
+
+.info p{
+    font-size:1.2rem;
+    color:#98ff8b;
+    font-weight:600;
+    word-break:break-word;
+}
+
+@media(max-width:768px){
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .contact-section h2{
+         font-size:2rem;
+         margin-bottom:30px;
+         font-weight:600;
+         color:#e8e8e8;
+    }
+
+    .info h3{
+        font-size:1.4rem;
+    }
+
+    .info p{
+        font-size:1rem;
+    }
+
+    .icon-circle{
+        width:80px;
+        height:80px;
+    }
+}  
+
+     /* Navigation Menu */
+     
+.menu{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin-top:50px;
+}
+
+.menu a{
+    color:#98ff78;
+    text-decoration:none;
+    font-family:'Orbitron',sans-serif;
+    font-size:1.5rem;
+    padding:10px 18px;
+    border:1px solid #98ff78;
+    border-radius:5px;
+    transition:.3s;
+}
+
+.menu a:hover{
+    background:#98ff78;
+    color:#000;
+ }
+

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<link rel = "stylesheet" href="style.css" >
+<link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap"  rel="stylesheet">
+<link rel = "stylesheet" href="contact.css" >
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<title>Contact Form</title>
+</head>
+
+<body>
+<div style="text-align: center;">
+<br><br>
+<h2>Don't hesitate to</h2>
+
+
+<section class="contact-section">
+    <h1 class="title">Contact <span>Me</span></h1>
+
+    <h2 class="subtitle">
+        <span class="line"></span>
+        Send me a <span>message</span>
+    </h2>
+
+    <form class="contact-form" id="contact-form">
+
+        <div class="left-side">
+
+            <div class="input-box">
+                <div class="icon">
+                    <i class="fa-solid fa-signature"></i>
+                </div>
+                <input type="text" name="name" placeholder="Name*" required>
+            </div>
+
+            <div class="input-box">
+                <div class="icon">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <input type="email" name="email" placeholder="Email*" required>
+            </div>
+
+            <div class="input-box">
+                <div class="icon">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                </div>
+                <input type="text" name="subject" placeholder="Subject*" required>
+            </div>
+
+        </div>
+
+        <div class="right-side">
+            <textarea name="message" placeholder="Message*" required></textarea>
+        </div>
+
+       <button type="submit" class="send-btn">
+          <i class="fa-solid fa-envelope"></i>
+          SEND MESSAGE
+       </button>
+
+    </form>
+    
+      <p id="status"></p>
+    
+    <br><br><br>
+    <h2>
+        <span class="green-line">|</span>
+        Or if you <span class="highlight">prefer</span>...
+    </h2><br><br>
+
+    <div class="contact-grid">
+
+        <div class="contact-card">
+            <div class="icon-circle">
+                <i class="fas fa-phone"></i>
+            </div>
+            <div class="info">
+                <h3>Phone</h3>
+                <p>+9975632257</p>
+            </div>
+        </div>
+
+        <div class="contact-card">
+            <div class="icon-circle">
+                <i class="fas fa-envelope"></i>
+            </div>
+            <div class="info">
+                <h3>E-mail</h3>
+                <p>sayalisunilmore@gmail.com</p>
+            </div>
+        </div>
+
+        <div class="contact-card">
+            <div class="icon-circle">
+                <i class="fab fa-linkedin"></i>
+            </div>
+            <div class="info">
+                <h3>LinkedIn</h3>
+                <p><a href="https://www.linkedin.com/in/sayali-more-9ab402200/"> sayali-more-9ab402200 </a></p>
+            </div>
+        </div>
+
+    </div>
+    
+<br><br>    
+<nav class="menu">
+<a href="HomePage.html">About Me&nbsp;&nbsp;</a>
+<a href="education.html">Education&nbsp;&nbsp;</a>
+<a href="skills.html">Skills&nbsp;&nbsp;</a>
+<a href="experience.html">Experience&nbsp;&nbsp;</a>
+<a href="contact.html">Contact&nbsp;&nbsp;</a>
+</nav>
+
+</section>
+</div>
+     
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+emailjs.init("VSYMqppAmWjq26CDP");
+
+const form = document.getElementById("contact-form");
+
+form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm(
+        "service_etmbpvv",
+        "template_hfiemek",
+        this
+    )
+    .then(() => {
+        document.getElementById("status").innerHTML =
+            "Message sent successfully!";
+        form.reset();
+    })
+    .catch((error) => {
+        document.getElementById("status").innerHTML =
+            "Failed to send message.";
+        console.log(error);
+    });
+});
+</script>
+     
+</body>
+</html>
