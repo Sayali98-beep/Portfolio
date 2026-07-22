@@ -1,23 +1,82 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap"  rel="stylesheet">
 <link rel = "stylesheet" href="style.css" >
 <meta charset="UTF-8">
 </head>
+
+<script>
+const words = [
+    "Java Developer",
+    "Backend Developer",
+    "Spring Boot Developer"
+];
+
+let wordIndex = 0;
+let charIndex = 0;
+let currentWord = "";
+let isDeleting = false;
+
+const typingText = document.getElementById("typing-text");
+
+function type(){
+
+    currentWord = words[wordIndex];
+
+    if(!isDeleting){
+
+        typingText.textContent = currentWord.substring(0,charIndex++);
+
+        if(charIndex > currentWord.length){
+
+            isDeleting = true;
+
+            setTimeout(type,1200);
+
+            return;
+        }
+
+    }else{
+
+        typingText.textContent = currentWord.substring(0,charIndex--);
+
+        if(charIndex < 0){
+
+            isDeleting = false;
+
+            wordIndex = (wordIndex + 1) % words.length;
+
+        }
+
+    }
+
+    setTimeout(type,isDeleting ? 60 : 100);
+
+}
+
+setTimeout(type,1800);
+</script>
+
+
 <body>
 
  <div class="container">
 
-        <div class="corner"></div>
-
+        
         <!-- Hero Section -->
         <section class="hero">
 
+             <div class="corner-border">
+               <span class="top-line"></span>
+               <span class="left-line"></span>
+             </div>
+        
             <p class="hello">
-                <i class="fa-solid fa-cubes"></i>
+                <i class="fa-solid fa-user-astronaut"></i>
                 Hello...
             </p>
 
@@ -25,7 +84,11 @@
                 I'm <span>Sayali More!</span>
             </h1>
 
-            <div class="info">
+             <h3 class="typing">
+               <span id="typing-text"></span>
+            </h3>
+    
+          <!--   <div class="info">
 
                 <a href="assets/Sayali_More_Resume.pdf">
                     <i class="fa-solid fa-download"></i>
@@ -37,7 +100,20 @@
                     LinkHub
                 </a>
 
-            </div>
+            </div> -->
+            
+            
+             <div class="buttons">
+                <a href="assets/Sayali_More_Resume.pdf" class="btn btn1" download>
+                  <i class="fa-solid fa-download"></i>
+                    Download CV
+                </a>
+
+                <a href="https://github.com/yourusername" class="btn btn2">
+                  <i class="fa-brands fa-github"></i>
+                    LinkHub
+                </a>
+             </div>
 
         </section>
 
@@ -51,7 +127,7 @@
             <div class="about-content">
 
                 <!-- Monitor -->
-                <div class="monitor">
+                <div class="monitor monitor-animation">
 
                     <div class="screen">
                         <div class="line short"></div>
@@ -71,7 +147,7 @@
                 <!-- Text -->
                 <div class="text-content">
 
-                    <p>
+                    <p class="fade-up delay1">
                         A Computer Science graduate with 4+ years of professional experience 
                         in the banking domain. Experienced in building secure and scalable banking 
                         applications, with strong expertise in enterprise software development. 
@@ -79,12 +155,12 @@
                         continuously learning modern tools and best practices.
                     </p>
 
-                    <p>
+                    <p class="fade-up delay2">
                         Skilled in building scalable applications, computer
                         vision, deep learning, and backend development. 
                     </p>
 
-                    <p>
+                    <p class="fade-up delay3">
                         I look forward to collaborating
                         <span class="highlight">with you!</span>
                     </p>
@@ -92,7 +168,8 @@
                 </div>
 
             </div>
-
+  </section>
+  
 <section class="interests">
 
     <div class="section-title">
